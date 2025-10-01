@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-mode="light">
+<html lang="en" data-mode="light" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
