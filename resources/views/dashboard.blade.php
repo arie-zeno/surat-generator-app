@@ -84,7 +84,7 @@
                             <th scope="col" class="px-4 py-3">NIP</th>
                             <th scope="col" class="px-4 py-3">Keterangan</th>
                             <th scope="col" class="px-4 py-3">
-                                <span class="sr-only">Actions</span>
+                                <span class="sr-only"> </span>
                             </th>
                         </tr>
                         </thead>
