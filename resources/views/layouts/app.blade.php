@@ -9,22 +9,22 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
-<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+<button data-drawer-target="default-sidebar" data-drawer-toggle="default-sidebar" aria-controls="default-sidebar" type="button" class="inline-flex items-center p-2 mt-2 ml-3 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 ">
     <span class="sr-only">Open sidebar</span>
     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <path clip-rule="evenodd" fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"></path>
     </svg>
 </button>
 
-<div class="antialiased bg-gray-50 dark:bg-gray-900">
-    <nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+<div class="antialiased bg-gray-50 900">
+    <nav class="bg-white border-b border-gray-200 px-4 py-2.5   fixed left-0 right-0 top-0 z-50">
         <div class="flex flex-wrap justify-between items-center">
             <div class="flex justify-start items-center">
                 <button
                     data-drawer-target="drawer-navigation"
                     data-drawer-toggle="drawer-navigation"
                     aria-controls="drawer-navigation"
-                    class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100 dark:focus:bg-gray-700 focus:ring-2 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    class="p-2 mr-2 text-gray-600 rounded-lg cursor-pointer md:hidden hover:text-gray-900 hover:bg-gray-100 focus:bg-gray-100  focus:ring-2 focus:ring-gray-100    "
                 >
                     <svg
                         aria-hidden="true"
@@ -55,11 +55,11 @@
                     <span class="sr-only">Toggle sidebar</span>
                 </button>
                 <a  class="flex items-center justify-between mr-4" id="togleSidebar">
-                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m15 19-7-7 7-7"/>
                     </svg>
 
-                    <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white ml-4">Surat Generator</span>
+                    <span class="self-center text-2xl font-semibold whitespace-nowrap  ml-4">Surat Generator</span>
                 </a>
 
             </div>
@@ -69,7 +69,7 @@
                 <button
                     type="button"
                     data-dropdown-toggle="notification-dropdown"
-                    class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    class="p-2 mr-1 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100    focus:ring-4 focus:ring-gray-300 "
                 >
                     <span class="sr-only">View notifications</span>
                     <!-- Bell icon -->
@@ -87,18 +87,18 @@
                 </button>
                 <!-- Dropdown menu -->
                 <div
-                    class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:divide-gray-600 dark:bg-gray-700 rounded-xl"
+                    class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg  rounded-xl"
                     id="notification-dropdown"
                 >
                     <div
-                        class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300"
+                        class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50  "
                     >
                         Notifications
                     </div>
                     <div>
                         <a
                             href="#"
-                            class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                            class="flex py-3 px-4 border-b hover:bg-gray-100  "
                         >
                             <div class="flex-shrink-0">
                                 <img
@@ -107,7 +107,7 @@
                                     alt="Bonnie Green avatar"
                                 />
                                 <div
-                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 dark:border-gray-700"
+                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 rounded-full border border-white bg-primary-700 "
                                 >
                                     <svg
                                         aria-hidden="true"
@@ -127,15 +127,15 @@
                             </div>
                             <div class="pl-3 w-full">
                                 <div
-                                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                                    class="text-gray-500 font-normal text-sm mb-1.5 "
                                 >
                                     New message from
-                                    <span class="font-semibold text-gray-900 dark:text-white"
+                                    <span class="font-semibold text-gray-900 "
                                     >Bonnie Green</span
                                     >: "Hey, what's up? All set for the presentation?"
                                 </div>
                                 <div
-                                    class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                                    class="text-xs font-medium text-primary-600 "
                                 >
                                     a few moments ago
                                 </div>
@@ -143,7 +143,7 @@
                         </a>
                         <a
                             href="#"
-                            class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                            class="flex py-3 px-4 border-b hover:bg-gray-100  "
                         >
                             <div class="flex-shrink-0">
                                 <img
@@ -152,7 +152,7 @@
                                     alt="Jese Leos avatar"
                                 />
                                 <div
-                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white dark:border-gray-700"
+                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-gray-900 rounded-full border border-white "
                                 >
                                     <svg
                                         aria-hidden="true"
@@ -169,19 +169,19 @@
                             </div>
                             <div class="pl-3 w-full">
                                 <div
-                                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                                    class="text-gray-500 font-normal text-sm mb-1.5 "
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
+                    <span class="font-semibold text-gray-900 "
                     >Jese leos</span
                     >
                                     and
-                                    <span class="font-medium text-gray-900 dark:text-white"
+                                    <span class="font-medium text-gray-900 "
                                     >5 others</span
                                     >
                                     started following you.
                                 </div>
                                 <div
-                                    class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                                    class="text-xs font-medium text-primary-600 "
                                 >
                                     10 minutes ago
                                 </div>
@@ -189,7 +189,7 @@
                         </a>
                         <a
                             href="#"
-                            class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                            class="flex py-3 px-4 border-b hover:bg-gray-100  "
                         >
                             <div class="flex-shrink-0">
                                 <img
@@ -198,7 +198,7 @@
                                     alt="Joseph McFall avatar"
                                 />
                                 <div
-                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white dark:border-gray-700"
+                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-red-600 rounded-full border border-white "
                                 >
                                     <svg
                                         aria-hidden="true"
@@ -217,19 +217,19 @@
                             </div>
                             <div class="pl-3 w-full">
                                 <div
-                                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                                    class="text-gray-500 font-normal text-sm mb-1.5 "
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
+                    <span class="font-semibold text-gray-900 "
                     >Joseph Mcfall</span
                     >
                                     and
-                                    <span class="font-medium text-gray-900 dark:text-white"
+                                    <span class="font-medium text-gray-900 "
                                     >141 others</span
                                     >
                                     love your story. See it and view more stories.
                                 </div>
                                 <div
-                                    class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                                    class="text-xs font-medium text-primary-600 "
                                 >
                                     44 minutes ago
                                 </div>
@@ -237,7 +237,7 @@
                         </a>
                         <a
                             href="#"
-                            class="flex py-3 px-4 border-b hover:bg-gray-100 dark:hover:bg-gray-600 dark:border-gray-600"
+                            class="flex py-3 px-4 border-b hover:bg-gray-100  "
                         >
                             <div class="flex-shrink-0">
                                 <img
@@ -246,7 +246,7 @@
                                     alt="Roberta Casas image"
                                 />
                                 <div
-                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white dark:border-gray-700"
+                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-green-400 rounded-full border border-white "
                                 >
                                     <svg
                                         aria-hidden="true"
@@ -265,20 +265,20 @@
                             </div>
                             <div class="pl-3 w-full">
                                 <div
-                                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                                    class="text-gray-500 font-normal text-sm mb-1.5 "
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
+                    <span class="font-semibold text-gray-900 "
                     >Leslie Livingston</span
                     >
                                     mentioned you in a comment:
                                     <span
-                                        class="font-medium text-primary-600 dark:text-primary-500"
+                                        class="font-medium text-primary-600 "
                                     >@bonnie.green</span
                                     >
                                     what do you say?
                                 </div>
                                 <div
-                                    class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                                    class="text-xs font-medium text-primary-600 "
                                 >
                                     1 hour ago
                                 </div>
@@ -286,7 +286,7 @@
                         </a>
                         <a
                             href="#"
-                            class="flex py-3 px-4 hover:bg-gray-100 dark:hover:bg-gray-600"
+                            class="flex py-3 px-4 hover:bg-gray-100 "
                         >
                             <div class="flex-shrink-0">
                                 <img
@@ -295,7 +295,7 @@
                                     alt="Robert image"
                                 />
                                 <div
-                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white dark:border-gray-700"
+                                    class="flex absolute justify-center items-center ml-6 -mt-5 w-5 h-5 bg-purple-500 rounded-full border border-white "
                                 >
                                     <svg
                                         aria-hidden="true"
@@ -312,16 +312,16 @@
                             </div>
                             <div class="pl-3 w-full">
                                 <div
-                                    class="text-gray-500 font-normal text-sm mb-1.5 dark:text-gray-400"
+                                    class="text-gray-500 font-normal text-sm mb-1.5 "
                                 >
-                    <span class="font-semibold text-gray-900 dark:text-white"
+                    <span class="font-semibold text-gray-900 "
                     >Robert Brown</span
                     >
                                     posted a new video: Glassmorphism - learn how to implement
                                     the new design trend.
                                 </div>
                                 <div
-                                    class="text-xs font-medium text-primary-600 dark:text-primary-500"
+                                    class="text-xs font-medium text-primary-600 "
                                 >
                                     3 hours ago
                                 </div>
@@ -330,12 +330,12 @@
                     </div>
                     <a
                         href="#"
-                        class="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:text-white dark:hover:underline"
+                        class="block py-2 text-md font-medium text-center text-gray-900 bg-gray-50 hover:bg-gray-100 "
                     >
                         <div class="inline-flex items-center">
                             <svg
                                 aria-hidden="true"
-                                class="mr-2 w-4 h-4 text-gray-500 dark:text-gray-400"
+                                class="mr-2 w-4 h-4 text-gray-500 "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -355,7 +355,7 @@
                 <button
                     type="button"
                     data-dropdown-toggle="apps-dropdown"
-                    class="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    class="p-2 text-gray-500 rounded-lg hover:text-gray-900 hover:bg-gray-100    focus:ring-4 focus:ring-gray-300 "
                 >
                     <span class="sr-only">View notifications</span>
                     <!-- Icon -->
@@ -372,22 +372,22 @@
                 </button>
                 <!-- Dropdown menu -->
                 <div
-                    class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                    class="hidden overflow-hidden z-50 my-4 max-w-sm text-base list-none bg-white rounded divide-y divide-gray-100 shadow-lg  "
                     id="apps-dropdown"
                 >
                     <div
-                        class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-600 dark:text-gray-300"
+                        class="block py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50  "
                     >
                         Apps
                     </div>
                     <div class="grid grid-cols-3 gap-4 p-4">
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -398,15 +398,15 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">Sales</div>
+                            <div class="text-sm text-gray-900 ">Sales</div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -415,15 +415,15 @@
                                     d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">Users</div>
+                            <div class="text-sm text-gray-900 ">Users</div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -434,15 +434,15 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">Inbox</div>
+                            <div class="text-sm text-gray-900 ">Inbox</div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -453,17 +453,17 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">
+                            <div class="text-sm text-gray-900 ">
                                 Profile
                             </div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -474,17 +474,17 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">
+                            <div class="text-sm text-gray-900 ">
                                 Settings
                             </div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -496,17 +496,17 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">
+                            <div class="text-sm text-gray-900 ">
                                 Products
                             </div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -520,17 +520,17 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">
+                            <div class="text-sm text-gray-900 ">
                                 Pricing
                             </div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="currentColor"
                                 viewBox="0 0 20 20"
                                 xmlns="http://www.w3.org/2000/svg"
@@ -541,17 +541,17 @@
                                     clip-rule="evenodd"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">
+                            <div class="text-sm text-gray-900 ">
                                 Billing
                             </div>
                         </a>
                         <a
                             href="#"
-                            class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+                            class="block p-4 text-center rounded-lg hover:bg-gray-100  group"
                         >
                             <svg
                                 aria-hidden="true"
-                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
+                                class="mx-auto mb-1 w-7 h-7 text-gray-400 group-hover:text-gray-500  "
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -564,7 +564,7 @@
                                     d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
                                 ></path>
                             </svg>
-                            <div class="text-sm text-gray-900 dark:text-white">
+                            <div class="text-sm text-gray-900 ">
                                 Logout
                             </div>
                         </a>
@@ -572,7 +572,7 @@
                 </div>
                 <button
                     type="button"
-                    class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
                     id="user-menu-button"
                     aria-expanded="false"
                     data-dropdown-toggle="dropdown"
@@ -586,46 +586,46 @@
                 </button>
                 <!-- Dropdown menu -->
                 <div
-                    class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
+                    class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow  "
                     id="dropdown"
                 >
                     <div class="py-3 px-4">
               <span
-                  class="block text-sm font-semibold text-gray-900 dark:text-white"
+                  class="block text-sm font-semibold text-gray-900 "
               >Neil Sims</span
               >
                         <span
-                            class="block text-sm text-gray-900 truncate dark:text-white"
+                            class="block text-sm text-gray-900 truncate "
                         >name@flowbite.com</span
                         >
                     </div>
                     <ul
-                        class="py-1 text-gray-700 dark:text-gray-300"
+                        class="py-1 text-gray-700 "
                         aria-labelledby="dropdown"
                     >
                         <li>
                             <a
                                 href="#"
-                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                class="block py-2 px-4 text-sm hover:bg-gray-100   "
                             >My profile</a
                             >
                         </li>
                         <li>
                             <a
                                 href="#"
-                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-400 dark:hover:text-white"
+                                class="block py-2 px-4 text-sm hover:bg-gray-100   "
                             >Account settings</a
                             >
                         </li>
                     </ul>
                     <ul
-                        class="py-1 text-gray-700 dark:text-gray-300"
+                        class="py-1 text-gray-700 "
                         aria-labelledby="dropdown"
                     >
                         <li>
                             <a
                                 href="#"
-                                class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                class="flex items-center py-2 px-4 text-sm hover:bg-gray-100  "
                             ><svg
                                     class="mr-2 w-5 h-5 text-gray-400"
                                     fill="currentColor"
@@ -644,7 +644,7 @@
                         <li>
                             <a
                                 href="#"
-                                class="flex items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                class="flex items-center py-2 px-4 text-sm hover:bg-gray-100  "
                             ><svg
                                     class="mr-2 w-5 h-5 text-gray-400"
                                     fill="currentColor"
@@ -661,12 +661,12 @@
                         <li>
                             <a
                                 href="#"
-                                class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                class="flex justify-between items-center py-2 px-4 text-sm hover:bg-gray-100  "
                             >
                   <span class="flex items-center">
                     <svg
                         aria-hidden="true"
-                        class="mr-2 w-5 h-5 text-primary-600 dark:text-primary-500"
+                        class="mr-2 w-5 h-5 text-primary-600 "
                         fill="currentColor"
                         viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg"
@@ -696,13 +696,13 @@
                         </li>
                     </ul>
                     <ul
-                        class="py-1 text-gray-700 dark:text-gray-300"
+                        class="py-1 text-gray-700 "
                         aria-labelledby="dropdown"
                     >
                         <li>
                             <a
                                 href="#"
-                                class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                class="block py-2 px-4 text-sm hover:bg-gray-100  "
                             >Sign out</a
                             >
                         </li>
@@ -715,11 +715,11 @@
     <!-- Sidebar -->
 
     <aside
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0  "
         aria-label="Sidenav"
         id="drawer-navigation"
     >
-        <div class="overflow-y-auto py-5 px-3 h-full bg-white dark:bg-gray-800">
+        <div class="overflow-y-auto py-5 px-3 h-full bg-white ">
             <form action="#" method="GET" class="md:hidden mb-2">
                 <label for="sidebar-search" class="sr-only">Search</label>
                 <div class="relative">
@@ -727,7 +727,7 @@
                         class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
                     >
                         <svg
-                            class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                            class="w-5 h-5 text-gray-500 "
                             fill="currentColor"
                             viewBox="0 0 20 20"
                             xmlns="http://www.w3.org/2000/svg"
@@ -743,7 +743,7 @@
                         type="text"
                         name="search"
                         id="sidebar-search"
-                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full pl-10 p-2"
                         placeholder="Search"
                     />
                 </div>
@@ -752,9 +752,9 @@
                 <li>
                     <a
                         href="{{route('helper')}}"
-                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group @if($title == 'Helper') bg-gray-100  @endif"
+                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg  hover:bg-gray-100  group @if($title == 'Helper') bg-gray-100  @endif"
                     >
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path fill="currentColor" d="M2 7c0-1.10457.89543-2 2-2h16c1.1046 0 2 .89543 2 2v4c0 .5523-.4477 1-1 1s-1-.4477-1-1v-1H4v7h10c.5523 0 1 .4477 1 1s-.4477 1-1 1H4c-1.10457 0-2-.8954-2-2V7Z"/>
                             <path fill="currentColor" d="M5 14c0-.5523.44772-1 1-1h2c.55228 0 1 .4477 1 1s-.44772 1-1 1H6c-.55228 0-1-.4477-1-1Zm5 0c0-.5523.4477-1 1-1h4c.5523 0 1 .4477 1 1s-.4477 1-1 1h-4c-.5523 0-1-.4477-1-1Zm9-1c.5523 0 1 .4477 1 1v1h1c.5523 0 1 .4477 1 1s-.4477 1-1 1h-1v1c0 .5523-.4477 1-1 1s-1-.4477-1-1v-1h-1c-.5523 0-1-.4477-1-1s.4477-1 1-1h1v-1c0-.5523.4477-1 1-1Z"/>
                         </svg>
@@ -766,9 +766,9 @@
                 <li>
                     <a
                         href="{{route('templates.index')}}"
-                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group @if($title == 'Surat') bg-gray-100  @endif"
+                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg  hover:bg-gray-100  group @if($title == 'Surat') bg-gray-100  @endif"
                     >
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <svg class="w-6 h-6 text-gray-800 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linecap="round" stroke-width="2" d="m3.5 5.5 7.893 6.036a1 1 0 0 0 1.214 0L20.5 5.5M4 19h16a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Z"/>
                         </svg>
 
