@@ -9,6 +9,12 @@
             <p style="color:green">{{ session('success') }}</p>
         @endif
 
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+                <p style="color:red">{{ $error }}</p>
+            @endforeach
+        @endif
+
 
 
 
@@ -76,6 +82,33 @@
                     </div>
 
                 </div>
+                <div class="w-full px-4 pb-4">
+                    <form action="{{ route('helper') }}" method="GET" class="flex flex-col sm:flex-row gap-2 sm:items-center">
+                        <div class="relative flex-1">
+                            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                                <svg class="w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 19.5-4.5-4.5m2.25-4.5a8.25 8.25 0 1 1-16.5 0 8.25 8.25 0 0 1 16.5 0Z" />
+                                </svg>
+                            </div>
+                            <label for="cari" class="sr-only">Cari data helper</label>
+                            <input type="text" id="cari" name="cari" value="{{ $cari }}" class="ps-10 p-2.5 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500" placeholder="Cari nama, NIP, atau keterangan..." />
+                        </div>
+                        <button type="submit" class="px-4 py-2.5 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg">
+                            Cari
+                        </button>
+                        @if($cari !== '')
+                            <a href="{{ route('helper') }}" class="px-4 py-2.5 text-sm font-medium text-gray-900 bg-gray-50 border border-gray-300 hover:bg-gray-100 rounded-lg text-center">
+                                Reset
+                            </a>
+                        @endif
+                    </form>
+
+                    @if($cari !== '')
+                        <p class="mt-2 text-sm text-gray-500">
+                            {{ $data->count() }} data ditemukan untuk &quot;{{ $cari }}&quot;.
+                        </p>
+                    @endif
+                </div>
                 <div class="overflow-x-auto w-full">
                     <table class="w-full text-sm text-left text-gray-500 ">
                         <thead class="text-xs text-gray-700 bg-gray-50 ">
@@ -105,16 +138,30 @@
                                             </span>
                                         </button>
                                     </a>
-                                    <a href="{{ route('helper.remove', $t->id) }}">
-                                        <button class="relative inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200   focus:ring-4 focus:outline-none focus:ring-red-100 ">
+                                    <form action="{{ route('helper.remove', $t->id) }}" method="POST" onsubmit="return confirm('Hapus data {{ $t->nama }}?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="relative inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200   focus:ring-4 focus:outline-none focus:ring-red-100 ">
                                             <span class="relative px-3 py-1 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-transparent ">
                                             Hapus
                                             </span>
                                         </button>
-                                    </a>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
+
+                        @if($data->isEmpty())
+                            <tr>
+                                <td colspan="4" class="px-4 py-6 text-center text-gray-500">
+                                    @if($cari !== '')
+                                        Tidak ada data helper yang cocok dengan &quot;{{ $cari }}&quot;.
+                                    @else
+                                        Belum ada data helper.
+                                    @endif
+                                </td>
+                            </tr>
+                        @endif
                         </tbody>
                     </table>
                 </div>

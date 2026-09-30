@@ -9,6 +9,12 @@
             <p style="color:green">{{ session('success') }}</p>
         @endif
 
+        @if($errors->any())
+            @foreach($errors->all() as $error)
+                <p style="color:red">{{ $error }}</p>
+            @endforeach
+        @endif
+
 
 
 
@@ -38,7 +44,7 @@
                         </button>
                     </div>
                         <!-- Main modal -->
-                        <div id="modal-tambah" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div id="modal-tambah" tabindex="-1" aria-hidden="true" @if($errors->any()) data-modal-show="modal-tambah" @endif class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
                             <div class="relative p-4 w-full max-w-2xl max-h-full">
                                 <!-- Modal content -->
                                 <div class="relative bg-white rounded-lg shadow-sm ">
@@ -109,20 +115,22 @@
                                         </button>
                                     </a>
 
-                                    <a href="{{ asset('storage/templates/' . $t->id) }}" target="_blank">
+                                    <a href="{{ asset('storage/' . $t->file) }}" target="_blank">
                                         <button class="relative inline-flex items-center justify-center p-0.5 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white  focus:ring-4 focus:outline-none focus:ring-cyan-200 ">
                                         <span class="relative px-3 py-1 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-transparent ">
                                         Lihat
                                         </span>
                                         </button>
                                     </a>
-                                    <a href="/surat/hapus/{{$t->id}}">
-                                        <button class="relative inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200   focus:ring-4 focus:outline-none focus:ring-red-100 ">
+                                    <form action="{{ route('surat.remove', $t->id) }}" method="POST" onsubmit="return confirm('Hapus template {{ $t->nama_surat }}?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="relative inline-flex items-center justify-center p-0.5  overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200   focus:ring-4 focus:outline-none focus:ring-red-100 ">
 <span class="relative px-3 py-1 transition-all ease-in duration-75 bg-white  rounded-md group-hover:bg-transparent ">
 Hapus
 </span>
                                         </button>
-                                    </a>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach

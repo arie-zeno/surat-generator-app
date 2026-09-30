@@ -25,35 +25,36 @@ class SuratController extends Controller
     // Upload template docx
     public function upload(Request $request)
     {
-        try {
+        $validated = $request->validate([
+            'nama_surat' => ['required', 'string', 'max:255'],
+            'template' => ['required', 'file', 'mimes:docx', 'max:5120'],
+        ]);
 
-
-            $request->validate([
-                'template' => 'required|max:5120',
-            ]);
-
-            $originalName = pathinfo($request->file('template')->getClientOriginalName(), PATHINFO_FILENAME);
+        $file = $request->file('template');
+        $originalName = pathinfo($file->getClientOriginalName(), PATHINFO_FILENAME);
 
 // Bersihkan nama biar aman untuk filesystem (hapus spasi & karakter aneh)
-            $safeName = preg_replace('/[^A-Za-z0-9_\-]/', '_', $originalName);
-            $name = 'template_' . time() . "_" . $safeName . '.docx';
+        $safeName = preg_replace('/[^A-Za-z0-9_\-]/', '_', $originalName);
+        $name = 'template_' . time() . "_" . $safeName . '.docx';
 
-            // Simpan ke storage/app/public/templates
-            $path = $request->file('template')->storeAs('templates', $name, 'public');
+        // Simpan ke storage/app/public/templates
+        $path = $file->storeAs('templates', $name, 'public');
 
+        try {
             // Simpan metadata ke database
             Surat::create([
-                'nama_surat' => $request->nama_surat,
+                'nama_surat' => $validated['nama_surat'],
                 'nama_file'   => $name,
                 'file'          => $path,
             ]);
+        } catch (\Throwable $e) {
+            Storage::disk('public')->delete($path);
 
-            return redirect()->route('templates.index')
-                ->with('success', 'Template berhasil diupload');
-        }catch (\Exception $exception){
-            return redirect()->route('templates.index')
-                ->with('success', $exception->getMessage());
+            throw $e;
         }
+
+        return redirect()->route('templates.index')
+            ->with('success', 'Template berhasil diupload');
     }
 
     // Form input berdasarkan placeholder
@@ -145,7 +146,14 @@ class SuratController extends Controller
     public function remove($id)
     {
         $template = Surat::findOrFail($id);
+        $file = $template->file;
+
         $template->delete();
+
+        if ($file) {
+            Storage::disk('public')->delete($file);
+        }
+
         return redirect()->route('templates.index')->with('success', 'Template berhasil dihapus');
     }
 }
